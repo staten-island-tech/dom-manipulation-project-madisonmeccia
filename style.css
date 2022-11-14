@@ -1,8 +1,23 @@
-#big-black-box {
-    background-color: black;
-  
-    font-size: 2vh;
-    color: cornsilk;
-    height: 100vh;
+body{
+  background-image: url(ts.jpg);
+}
+h1{
+  color: mintcream;
+  background-color: grey;
+  text-align: center;
+  }
+  .forminput {
     text-align: center;
+    color: mintcream;
+    background-color: grey;
+  }
+  .formwinput {
+    text-align: center;
+    color: mintcream;
+    background-color: grey;
+  }
+  .forminputs {
+    text-align: center;
+    color: mintcream;
+    background-color: grey;
   }
