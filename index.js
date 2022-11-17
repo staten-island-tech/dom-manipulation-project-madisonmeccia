@@ -31,15 +31,15 @@ function backgroundAndText(back, text) {
   DOMSelectors.button.addEventListener("click", function () {
   let input = document.querySelectorAll(`#input`);
   let inputs = Array.from(input);
-  const recipe = {};
-  recipe.name = inputs[0].value;
-  recipe.ingredients = inputs[1].value;
-  recipe.instructions = inputs[2].value;
-  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Recipe For ${recipe.name}</p>`);
-  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Ingredients:
-  ${recipe.ingredients}</p>`);
-  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Instructions:
-  ${recipe.instructions}</p>`);
+  const tsalbum = {};
+  tsalbum.name = inputs[0].value;
+  tsalbum.songtitle = inputs[1].value;
+  recipe.imageurl = inputs[2].value;
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> T.S album For ${tsalbum.name}</p>`);
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> songtitle:
+  ${tsalbum.songtitle}</p>`);
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> albumurl:
+  ${tsalbum.albumurl}</p>`);
   console.log(inputs)
   inputs.forEach((el)=>{
     el.value="";
