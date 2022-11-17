@@ -1,30 +1,54 @@
 const DOMSelectors = {
-  formid: document.getElementById("form"),
-  text: document.querySelector("#text"),
-  box: document.getElementById("big-black-box"),
-  points: document.querySelectorAll(".point"),
+  formid: document.getElementById("btn"),
+  text: document.querySelector("#imageURL"),
+  box: document.getElementById("entries"),
+  points: document.querySelector(".display"),
+  points: document.querySelector("#clear"),
 };
 
-function backgroundAndText(back, text) {
-  back.style.backgroundColor = "red";
-  text.textContent = "this is now a real big red box, now go look at console";
-  text.style.fontSize = "40px";
-
-  DOMSelectors.formid.addEventListener("submit", function (backgroundAndText) {
-    backgroundAndText.preventDefault();
-    backgroundAndText(DOMSelectors.backgroundColor, DOMSelectors.textContent);
+function changeLi() {
+  changeLi();
+  DOMSelectors.button.addEventListener("click", function () {
+    let input = document.querySelectorAll(`#input`);
+    let inputs = Array.from(input);
+    const tsalbum = {};
+    tsalbum.name = inputs[0].value;
+    tsalbum.songtitle = inputs[1].value;
+    recipe.imageurl = inputs[2].value;
+    DOMSelectors.display.insertAdjacentHTML(
+      "beforeend",
+      `<p> T.S album For ${tsalbum.name}</p>`
+    );
+    DOMSelectors.display.insertAdjacentHTML(
+      "beforeend",
+      `<p> songtitle:${tsalbum.songtitle}</p>`
+    );
+    DOMSelectors.display.insertAdjacentHTML(
+      "beforeend",
+      `<p> albumurl:${tsalbum.albumurl}</p>`
+    );
+    console.log(inputs);
+    inputs.forEach((el) => {
+      el.value = "";
+    });
   });
 
-  function changeLi() {
-    let i = 0;
-    DOMSelectors.points.forEach((el) => {
-      el.addEventListener("click", function () {
-        el.innerHTML = `${i}`;
-        i++;
+  DOMSelectors.button.addEventListener("click", function () {
+    let input = DOMSelectors.imageURL.value;
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<img src="${input}"></img>`
+    );
+    DOMSelectors.imageURL.value = "";
+  }); // when "enter" button is clicked, image of food will be shown at the bottom
 
-        console.log(i);
-      });
-    });
-  }
+  DOMSelectors.button.insertAdjacentHTML(
+    "afterend",
+    `<h2>full entry here: <h2>`
+  ); // heading separates results from entries
+
+  DOMSelectors.clearButton.addEventListener("click", function () {
+    location.reload();
+    return false;
+  }); // when "clear" button is clicked, page is refreshed/ new objects are cleared
 }
-//pasye
