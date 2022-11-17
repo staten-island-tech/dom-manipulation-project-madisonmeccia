@@ -25,4 +25,6 @@ function backgroundAndText(back, text) {
         console.log(i);
       });
     });
-  } }
+  }
+}
+//pasye
