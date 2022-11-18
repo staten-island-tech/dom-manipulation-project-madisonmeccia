@@ -1,7 +1,7 @@
 let DOMSelectors = {
- tsAlbum: document.getElementById("tsAlbum"),
+  title: document.getElementById("title"),
   songTitle: document.getElementById("songTitle"),
- imageUrl: document.getElementById("imageUrl"),
+  imageUrl: document.getElementById("imageUrl"),
   set: document.getElementById("enter"),
   body: document.getElementById("body"),
   temp: document.querySelector(".enters"),
@@ -10,35 +10,35 @@ let DOMSelectors = {
   clear: document.querySelectorAll("#clear"),
 };
 
-DOMSelectors.form.addEventListener("enter", function (e) {
+DOMSelectors.form.addEventListener("submit", function (e) {
   e.preventDefault();
-  let album = DOMSelectors.tsAlbum.value;
-  let song = DOMSelectors. songTitle.value;
+  let album = DOMSelectors.title.value;
+  let song = DOMSelectors.songTitle.value;
   let image = DOMSelectors.imageUrl.value;
 
-  DOMSelectors.body.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="enters">
-        <image src></image>
-        <h1 class="alb">${album}</h1>
-        <h2 class="son">${song}</h2>
-        <img src="${image}" class="imageUrl"alt="">
+  document.querySelector("#display").insertAdjacentHTML(
+    "beforeend",
+    `<div class="enter">
+       
+        <h3 class="alb">${album}</h3>
+        <h4 class="son">${song}</h4>
+        <img src="${image}" class="imageUrl"alt=""> 
         <br>
-        <button id="clear" >Delete</button>
+        <button id="clear">Delete</button>
     </div>`
   );
 
   DOMSelectors.clear = document.querySelectorAll("#clear");
   DOMSelectors.clear.forEach((button) =>
     button.addEventListener("click", function () {
-      this.parentElement.clear();
+      this.parentElement.remove();
     })
   );
   clear();
 });
 
 function clear() {
-  DOMSelectors.tsAlbum.value = "";
+  DOMSelectors.title.value = "";
   DOMSelectors.songTitle.value = "";
   DOMSelectors.imageUrl.value = "";
 }

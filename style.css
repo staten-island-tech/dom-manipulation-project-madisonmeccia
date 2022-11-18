@@ -12,6 +12,18 @@ h2{
   background-color:grey;
   margin: -3px;
 }
+h3{
+  color: white;
+  text-align: center;
+  }
+  h4{
+    color: white;
+    text-align: center;
+    }
+    .imageUrl{
+      display: flex;
+     align-content: center;
+    }
   .forminput {
     text-align: center;
     color: white;
