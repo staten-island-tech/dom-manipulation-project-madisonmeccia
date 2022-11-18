@@ -9,8 +9,8 @@ h1{
 h2{
   color: grey;
   background-color:grey;
+  margin: -3px;
 }
-
   .forminput {
     text-align: center;
     color: white;
