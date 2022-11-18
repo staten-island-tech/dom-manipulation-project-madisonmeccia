@@ -1,54 +1,44 @@
-const DOMSelectors = {
-  formid: document.getElementById("btn"),
-  text: document.querySelector("#imageURL"),
-  box: document.getElementById("entries"),
-  points: document.querySelector(".display"),
-  points: document.querySelector("#clear"),
+let DOMSelectors = {
+ tsAlbum: document.getElementById("tsAlbum"),
+  songTitle: document.getElementById("songTitle"),
+ imageUrl: document.getElementById("imageUrl"),
+  set: document.getElementById("enter"),
+  body: document.getElementById("body"),
+  temp: document.querySelector(".enter"),
+  clearForm: document.getElementById("clear"),
+  form: document.getElementById("form"),
+  clear: document.querySelectorAll("#clear"),
 };
 
-function changeLi() {
-  changeLi();
-  DOMSelectors.button.addEventListener("click", function () {
-    let input = document.querySelectorAll(`#input`);
-    let inputs = Array.from(input);
-    const tsalbum = {};
-    tsalbum.name = inputs[0].value;
-    tsalbum.songtitle = inputs[1].value;
-    recipe.imageurl = inputs[2].value;
-    DOMSelectors.display.insertAdjacentHTML(
-      "beforeend",
-      `<p> T.S album For ${tsalbum.name}</p>`
-    );
-    DOMSelectors.display.insertAdjacentHTML(
-      "beforeend",
-      `<p> songtitle:${tsalbum.songtitle}</p>`
-    );
-    DOMSelectors.display.insertAdjacentHTML(
-      "beforeend",
-      `<p> albumurl:${tsalbum.albumurl}</p>`
-    );
-    console.log(inputs);
-    inputs.forEach((el) => {
-      el.value = "";
-    });
-  });
+DOMSelectors.form.addEventListener("enter", function (e) {
+  e.preventDefault();
+  let album = DOMSelectors.tsAlbum.value;
+  let song = DOMSelectors. songTitle.value;
+  let image = DOMSelectors.imageUrl.value;
 
-  DOMSelectors.button.addEventListener("click", function () {
-    let input = DOMSelectors.imageURL.value;
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<img src="${input}"></img>`
-    );
-    DOMSelectors.imageURL.value = "";
-  }); // when "enter" button is clicked, image of food will be shown at the bottom
+  DOMSelectors.body.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="enter">
+        <image src></image>
+        <h1 class="alb">${album}</h1>
+        <h2 class="son">${song}</h2>
+        <img src="${image}" class="imageUrl"alt="">
+        <br>
+        <button id="clear" >Delete</button>
+    </div>`
+  );
 
-  DOMSelectors.button.insertAdjacentHTML(
-    "afterend",
-    `<h2>full entry here: <h2>`
-  ); // heading separates results from entries
+  DOMSelectors.clear = document.querySelectorAll("#clear");
+  DOMSelectors.clear.forEach((button) =>
+    button.addEventListener("click", function () {
+      this.parentElement.clear();
+    })
+  );
+  clear();
+});
 
-  DOMSelectors.clearButton.addEventListener("click", function () {
-    location.reload();
-    return false;
-  }); // when "clear" button is clicked, page is refreshed/ new objects are cleared
+function clear() {
+  DOMSelectors.tsAlbum.value = "";
+  DOMSelectors.songTitle.value = "";
+  DOMSelectors.imageUrl.value = "";
 }
