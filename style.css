@@ -2,22 +2,27 @@ body{
   background-image: url(ts.jpg);
 }
 h1{
-  color: mintcream;
+  color: white;
   background-color: grey;
   text-align: center;
   }
+h2{
+  color: grey;
+  background-color:grey;
+}
+
   .forminput {
     text-align: center;
-    color: mintcream;
+    color: white;
     background-color: grey;
   }
   .formwinput {
     text-align: center;
-    color: mintcream;
+    color: white;
     background-color: grey;
   }
   .forminputs {
     text-align: center;
-    color: mintcream;
+    color: white;
     background-color: grey;
   }
