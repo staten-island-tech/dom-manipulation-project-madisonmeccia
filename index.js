@@ -4,7 +4,7 @@ let DOMSelectors = {
  imageUrl: document.getElementById("imageUrl"),
   set: document.getElementById("enter"),
   body: document.getElementById("body"),
-  temp: document.querySelector(".enter"),
+  temp: document.querySelector(".enters"),
   clearForm: document.getElementById("clear"),
   form: document.getElementById("form"),
   clear: document.querySelectorAll("#clear"),
@@ -18,7 +18,7 @@ DOMSelectors.form.addEventListener("enter", function (e) {
 
   DOMSelectors.body.insertAdjacentHTML(
     "afterbegin",
-    `<div class="enter">
+    `<div class="enters">
         <image src></image>
         <h1 class="alb">${album}</h1>
         <h2 class="son">${song}</h2>
