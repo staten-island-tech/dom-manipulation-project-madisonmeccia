@@ -23,6 +23,7 @@ h3{
     .imageUrl{
       display: flex;
      align-items: center;
+    justify-content: center;
     }
   .forminput {
     text-align: center;
