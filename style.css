@@ -17,10 +17,10 @@ h2{
   text-align: center;
   }
   h4{
-    color: white;
+    color: black;
     text-align: center;
     }
-    .imageurl{
+    .imageUrl{
       display: flex;
      align-items: center;
     justify-content: center;
