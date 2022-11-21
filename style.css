@@ -15,10 +15,14 @@ h2{
 .alb{
   color: white;
   text-align: center;
+  -webkit-tap-highlight-color: red;
+-webkit-tap-highlight-color: transparent; /* for removing the highlight */
   }
   h4{
     color: white;
     text-align: center;
+    -webkit-tap-highlight-color: red;
+-webkit-tap-highlight-color: transparent; /* for removing the highlight */
     }
     .imageUrl{
       display: flex;
