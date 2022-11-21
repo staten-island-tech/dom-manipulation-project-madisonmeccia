@@ -20,9 +20,9 @@ DOMSelectors.form.addEventListener("submit", function (e) {
     "beforeend",
     `<div class="enter">
        
-        <p class="alb">${album}</p>
-        <p class="son">${song}</p>
-        <img src="${image}" class="imageUrl"alt=""> 
+        <h3 class="alb">${album}</h3>
+        <h4 class="son">${song}</h4>
+        <h5 class="imageUrl">${image}</h5>
         <br>
         <button id="clear">Delete</button>
     </div>`
