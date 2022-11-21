@@ -15,12 +15,12 @@ h2{
 .alb{
   color: white;
   text-align: center;
-  highlight
+  background-color:grey;
   }
-  h4{
+  .son{
     color: white;
     text-align: center;
-  
+    background-color:grey;
     }
     .imageUrl{
       display: flex;
