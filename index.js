@@ -22,7 +22,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
        
         <h3 class="alb">${album}</h3>
         <h4 class="son">${song}</h4>
-        <img src="$(image}" alt="" class="imageurl">
+        <img src="$(image}" alt="" class="img">
         <br>
         <button id="clear">Delete</button>.
     </div>`
