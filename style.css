@@ -5,7 +5,7 @@ h1{
   color: white;
   background-color: grey;
   text-align: center;
-  margin-bottom:-7px;
+  margin-bottom:-1px;
   }
 h2{
   color: grey;
@@ -15,12 +15,10 @@ h2{
 .alb{
   color: white;
   text-align: center;
-  background-color:grey;
   }
   .son{
     color: white;
     text-align: center;
-    background-color:grey;
     }
     .img{
       display: block;
@@ -43,3 +41,64 @@ h2{
     color: white;
     background-color: grey;
   }
+  :root {
+    /* Type */
+    --h1: 7.594rem;
+    --h2: 5.063rem;
+    --h3: 3.375rem;
+    --h4: 2.25rem;
+    --h5: 1.5rem;
+    --smallText: 0.8rem;
+  }
+  .button,
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: 3rem;
+  transition: all 0.2s;
+  position: relative;
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.button:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0.2);
+}
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 26%;
+  height: 30rem;
+  margin: 1rem auto;
+  background-color: gray;
+  align-items: center;
+}
+
+#clear {
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+#clear:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0.2);
+}
+#clear:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
+}

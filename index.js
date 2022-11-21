@@ -23,9 +23,9 @@ DOMSelectors.form.addEventListener("submit", function (e) {
         <h3 class="alb">${album}</h3>
         <h4 class="son">${song}</h4>
         <img src="${image}" class="img"alt="">
-        <br>
+        
         <button id="clear">clear entry</button>.
-    </div>`
+    </>`
   );
 
   DOMSelectors.clear = document.querySelectorAll("#clear");
